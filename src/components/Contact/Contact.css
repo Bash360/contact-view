@@ -1,0 +1,11 @@
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+margin-left: auto;
+margin-right: auto;
+
+  padding: 20px;
+  position: relative;
+  top: 50px;
+}

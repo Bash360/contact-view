@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Header from '../src/components/Header/Header';
+import Nav from '../src/components/Nav/Nav';
+import Home from '../src/components/Home/Home';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="appContainer">
+			<Nav />
+			<Header />
+			<Home style={{margin: "auto"}}/>
+		
+
+		
+		
+		</div>
+	);
 }
 
 export default App;
