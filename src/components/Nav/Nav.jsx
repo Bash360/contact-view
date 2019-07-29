@@ -6,26 +6,26 @@ export default function Nav() {
 		<ul className="mynav flex-column" style={{ color: '#fff',marginRight:"10px" , }}>
 			<li className="nav-item ">
 				<NavLink title="Home" className="nav-link " to="/">
-					<i class="fas fa-home" style={{ fontSize: '50px', color: '#fff', display: 'block' }} />
+					<i className="fas fa-home" style={{ fontSize: '50px', color: '#fff', display: 'block' }} />
 					Home
 				</NavLink>
 			</li>
 			<li className="nav-item " style={{ height: '120px' }}>
 				<NavLink title="Create Contact" className="nav-link" to="/createcontact">
-					<i class="fas fa-plus-square" style={{ fontSize: '50px', color: '#fff', display: 'block' }} />
+					<i className="fas fa-plus-square" style={{ fontSize: '50px', color: '#fff', display: 'block' }} />
 					Create Contact
 				</NavLink>
 			</li>
 
 			<li className="nav-item">
 				<NavLink title="contacts" className="nav-link" to="/nonblockedcontacts">
-					<i class="fas fa-user-check" style={{ fontSize: '50px', color: '#fff', display: 'block' }} />
+					<i className="fas fa-user-check" style={{ fontSize: '50px', color: '#fff', display: 'block' }} />
 					Contacts
 				</NavLink>
 			</li>
 			<li className="nav-item " style={{ height: '120px' }}>
 				<NavLink title="blocked contacts" className="nav-link " to="/blockedcontacts">
-					<i class="fas fa-user-alt-slash" style={{ fontSize: '50px', color: '#fff', display: 'block' }} />
+					<i className="fas fa-user-alt-slash" style={{ fontSize: '50px', color: '#fff', display: 'block' }} />
 					Blocked Contacts
 				</NavLink>
 			</li>
