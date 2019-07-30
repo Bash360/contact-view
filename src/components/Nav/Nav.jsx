@@ -13,7 +13,7 @@ export default function Nav() {
 			<li className="nav-item " style={{ height: '120px' }}>
 				<NavLink title="Create Contact" className="nav-link" to="/createcontact">
 					<i className="fas fa-plus-square" style={{ fontSize: '50px', color: '#fff', display: 'block' }} />
-					Create Contact
+					Add Contact
 				</NavLink>
 			</li>
 

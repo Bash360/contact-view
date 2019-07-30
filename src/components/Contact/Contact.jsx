@@ -7,7 +7,7 @@ function Contact(props) {
 	return (
 		<React.Fragment>
 			<div className="contactContainer">
-				<img style={{ width: '300px', height: '300px' }} src={props.pics} alt="profile" />
+				<img style={{ width: '300px', height: '300px' }} src={props.imageUrl} alt="profile" />
 				<p>
 					Name: {props.firstName} {props.lastName}
 				</p>
@@ -19,7 +19,7 @@ function Contact(props) {
 		</React.Fragment>
 	);
 }
-Contact.defaultProps = { pics };
+Contact.defaultProps = { imageUrl:pics };
 Contact.propTypes = {
 	firstName: PropTypes.string.isRequired,
 	lastName: PropTypes.string.isRequired,

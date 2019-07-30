@@ -23,7 +23,7 @@ export default function CreateContact() {
 	
 		return (
 			<div className="containerforlogin" style={{ height: '1000px' }}>
-				<form className="containerLogin">
+				<form className="containerLogin" enctype="multipart/form-data">
 					<h3>Create Contact</h3>
 
 					<label htmlFor="firstname">First Name</label>

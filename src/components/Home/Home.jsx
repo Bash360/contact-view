@@ -7,24 +7,25 @@ import './Home.css';
 
 const contact = gql`{
   users{
-    firstName,lastName,gender,phone,email,contactID
+    firstName,lastName,gender,phone,email,contactID, imageUrl
   }
   
 }`;
- function Home(props) { 
-   let users;
-   let contactList;
-   if (props.data.loading) { 
-    users = "....loading contact";
-   } else {
-     users = props.data.users;
-    contactList =users.map(contact => {
-       let { firstName, lastName, gender, phone, email, contactID } = contact;
-       return <li  key={contactID} ><Contact firstName={firstName} lastName={lastName} email={email} gender={gender} phone={phone} /></li>
-     });
-   }
-  return (
-    <ul className="contactsContainer">{contactList}</ul>
+function Home(props) {
+  const getContacts = () => {
+     
+    if (!props.data.loading) {
+      return (Array.isArray(props.data.users)) ? (props.data.users.map(contact => {
+        let { firstName, lastName, gender, phone, email, contactID } = contact;
+        return <li key={contactID} ><Contact firstName={firstName} lastName={lastName} email={email} gender={gender} phone={phone} /></li>
+      })) : "No Contacts";
+    
+    }
+  }
+
+  console.log(props.data)
+  return props.data.loading?"...loading contacts": (
+    <ul className="contactsContainer">{getContacts()}</ul>
   );
  }
 export default graphql(contact)(Home);
