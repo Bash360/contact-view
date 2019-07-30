@@ -7,14 +7,19 @@ import Nav from '../src/components/Nav/Nav';
 import Home from '../src/components/Home/Home';
 import CreateContact from '../src/components/CreateContact/CreateContact';
 import FourOFour from '../src/components/404/404';
+import { ApolloProvider } from 'react-apollo';
+import ApolloClient from 'apollo-boost';
+
+const client = new ApolloClient({ uri: "http://localhost:5000/graphql" });
+
 
 
 function App() {
 	return (
-	
+		<ApolloProvider client={client}>
 		<div className="appContainer">
 			<Nav />
-			
+
 			<Header />
 			<Switch>
 				<Route  exact path="/" component={Home}>
@@ -29,7 +34,8 @@ function App() {
 		
 			
 			</Switch>
-		</div>
+			</div>
+			</ApolloProvider>
 	);
 }
 

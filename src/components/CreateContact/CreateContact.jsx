@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import InputField from '../InputField/InputField.jsx';
 import './createContact.css';
 
+
 export default function CreateContact() {
 	const [formDetails, setFormDetails] = useState({ image: null });
 	let { firstname, lastname, email, phone, gender, image } = formDetails;
@@ -23,7 +24,7 @@ export default function CreateContact() {
 		return (
 			<div className="containerforlogin" style={{ height: '1000px' }}>
 				<form className="containerLogin">
-					<h3>Sign Up</h3>
+					<h3>Create Contact</h3>
 
 					<label htmlFor="firstname">First Name</label>
 					<InputField

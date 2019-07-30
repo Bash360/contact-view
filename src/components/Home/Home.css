@@ -1,4 +1,4 @@
-.contactContainer {
+.contactsContainer {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
@@ -8,8 +8,6 @@
   position: relative;
   top: 50px;
 }
-
-.contactContainer p {
-  font-size: 20px;
-  font-weight: bold;
+li{
+  list-style: none;
 }
